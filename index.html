@@ -1,89 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - HelloProgress</title>
     <style>
+        :root {
+            --primary: #1a73e8;
+            --text: #202124;
+            --text-secondary: #5f6368;
+            --bg: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --border: #dadce0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #8ab4f8;
+                --text: #e8eaed;
+                --text-secondary: #9aa0a6;
+                --bg: #202124;
+                --bg-secondary: #303134;
+                --border: #5f6368;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 20px;
+        }
+
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            padding: 40px 20px;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
+
         h1 {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: var(--text);
         }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
         }
+
+        h2 {
+            font-size: 1.25rem;
+            margin: 32px 0 16px;
+            color: var(--text);
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin: 20px 0 12px;
+            color: var(--text);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        ul,
+        ol {
+            margin: 0 0 16px 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
         a {
-            color: #3498db;
+            color: var(--primary);
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        .last-updated {
-            font-style: italic;
-            color: #7f8c8d;
-            margin-bottom: 20px;
+
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .contact-box {
+            background: var(--bg-secondary);
+            padding: 24px;
+            border-radius: 12px;
+            margin-top: 24px;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        .contact-box strong {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            background: var(--bg-secondary);
+            text-decoration: none;
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+            background: var(--bg-secondary);
+            font-weight: 600;
+        }
+
+        .badge-trader {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 6px;
+            background: #e8f0fe;
+            color: #1a73e8;
+            margin-bottom: 12px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .badge-trader {
+                background: #1e3a5f;
+                color: #8ab4f8;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--bg-secondary);
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Privacy Policy for HelloProgress</h1>
-        <p class="last-updated">Last updated: May 1, 2026</p>
+        <nav class="nav-links">
+            <a href="https://sumitkahar992.github.io/hello_progress_termsofservice/">Terms of Service</a>
+            <a href="https://sumitkahar992.github.io/hello_progress_privacy/" class="active">Privacy Policy</a>
+        </nav>
 
-        <p>Welcome to HelloProgress ("we", "our", or "us"). We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use the HelloProgress mobile application ("the App").</p>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: November 16, 2026</p>
 
-        <h2>1. Information We Collect and How We Use It</h2>
-        
-        <h3>Local Data Storage</h3>
-        <p>HelloProgress allows you to track events, deadlines, and countdowns. Any data you enter into the App, such as event titles, notes, dates, and visual preferences, is currently <strong>stored locally on your device</strong>. We do not transmit, sync, or store this personal content on remote servers.</p>
+        <div class="highlight-box">
+            <p><strong>HelloProgress</strong> (also displayed on-device as <strong>Hello Progress</strong>, package
+                <code>com.github.helloprogress</code>) is designed to keep your personal event data on your device.
+                This Privacy Policy explains what information is stored locally, what limited purchase and entitlement
+                data is processed by third-party billing services, what Android permissions are used, and your rights
+                under applicable privacy and trader transparency laws.</p>
+        </div>
 
-        <h3>Device Permissions</h3>
-        <p>To provide core functionalities, the App requests certain device permissions:</p>
+        <h2>1. Information We Collect</h2>
+
+        <h3>1.1 Data Stored Locally on Your Device</h3>
+        <p>HelloProgress stores your events (titles, notes, start and target dates, countdown/timer modes, reminder
+            settings, card visual styles, colors, and fonts), home screen widget bindings, and app preferences (theme,
+            language, layout, and Liquid Glass settings) locally on your device using Android Room database and Jetpack
+            DataStore preference files.</p>
+        <p>We do <strong>not</strong> operate cloud servers to store or sync your personal event content. If you choose
+            to use the local JSON Backup &amp; Restore feature (PRO) or the Share Card image/text action, the exported
+            backup file or generated PNG share image stays under your control and is only transferred to destinations or
+            apps you explicitly select via the Android file picker or share sheet.</p>
+
+        <h3>1.2 No User Accounts or Developer Cloud Sync</h3>
+        <p>HelloProgress does <strong>not</strong> require account registration, sign-in, or a user profile, and does not
+            collect your name, email address, or login credentials inside the App. Unless you disable system backup in
+            your Android device settings, Android Auto Backup (<code>allowBackup="true"</code>) may back up local app
+            data to your personal Google Drive/Android backup under Google's standard Android backup controls.</p>
+
+        <h3>1.3 Data Processed by Third-Party Services</h3>
+        <p>HelloProgress uses only the billing services needed to display plans, process optional PRO purchases, and
+            verify entitlements:</p>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Processed</th>
+            </tr>
+            <tr>
+                <td><strong>Google Play Billing</strong></td>
+                <td>Payment processing, subscription billing, trials, and refunds as merchant of record</td>
+                <td>Google Play transaction records, product/base-plan identifiers, purchase tokens, and subscription
+                    renewal/cancellation state</td>
+            </tr>
+            <tr>
+                <td><strong>RevenueCat</strong></td>
+                <td>Subscription and one-time lifetime entitlement management and purchase restoration</td>
+                <td>Pseudonymous SDK-generated app user identifier, purchase tokens/receipts, product identifiers, and
+                    active entitlement status (does <strong>not</strong> receive your event titles, notes, dates,
+                    widgets, or local backups)</td>
+            </tr>
+        </table>
+
+        <h2>2. Permissions We Request</h2>
+        <p>HelloProgress requests only the Android permissions required for its features and billing integration:</p>
         <ul>
-            <li><strong>Notifications:</strong> We request the POST_NOTIFICATIONS permission to send you event reminders and countdown alerts.</li>
-            <li><strong>Alarms and Reminders:</strong> We request the SCHEDULE_EXACT_ALARM permission to ensure your reminders fire exactly at the time you specify.</li>
-            <li><strong>Boot Completed:</strong> We request the RECEIVE_BOOT_COMPLETED permission so that your scheduled alarms and reminders are restored after your device restarts.</li>
+            <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Displays event countdown alerts and
+                scheduled reminders when you enable notifications.</li>
+            <li><strong>Alarms &amp; Reminders (<code>SCHEDULE_EXACT_ALARM</code>):</strong> Ensures time-sensitive
+                event reminders trigger at the exact scheduled date and time.</li>
+            <li><strong>Boot Completed (<code>RECEIVE_BOOT_COMPLETED</code>):</strong> Restores scheduled event
+                reminders and refreshes pinned home screen widgets after your device restarts or the App updates.</li>
+            <li><strong>Internet &amp; Network State (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong>
+                Allows Google Play Billing and RevenueCat to load store offerings, complete purchases, verify PRO
+                entitlements, and restore purchases.</li>
+            <li><strong>Google Play Billing (<code>com.android.vending.BILLING</code>):</strong> Enables in-app
+                subscriptions and lifetime purchases through Google Play.</li>
+            <li><strong>Background Scheduling (<code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>):</strong>
+                Included by AndroidX WorkManager/Glance components to reliably complete background widget refreshes and
+                reminder rescheduling.</li>
         </ul>
 
-        <h2>2. Third-Party Services</h2>
-        <p>While the core features of HelloProgress operate completely locally on your device, we plan to integrate carefully selected third-party services in the future to improve the App, monitor stability, and manage premium subscriptions. When these are introduced, they may collect specific data as outlined below:</p>
+        <h2>3. Diagnostics, Analytics &amp; Advertising</h2>
+        <p>HelloProgress displays <strong>no third-party advertisements</strong>, integrates <strong>no third-party
+                analytics or crash-reporting SDKs</strong> (such as Google/Firebase Analytics or Crashlytics), and does
+            <strong>not</strong> collect or use the Android Advertising ID (<code>AD_ID</code>).</p>
+
+        <h2>4. Subscriptions &amp; Purchases</h2>
+        <p>HelloProgress offers optional paid upgrades (<strong>HelloProgress PRO</strong>) via monthly and yearly
+            auto-renewing subscriptions (with free trial offers where displayed on Google Play before checkout) and a
+            one-time lifetime purchase. All financial payment details (such as credit card numbers or billing addresses)
+            are handled exclusively by Google Play; the developer never receives or stores your payment card details.</p>
+
+        <h2>5. Data Storage, Retention, and Deletion</h2>
+        <p>Your local event data and preferences remain on your device until you delete individual events inside the App,
+            clear app storage via Android <em>Settings &gt; Apps &gt; Hello Progress &gt; Storage &gt; Clear data</em>,
+            or uninstall the App.</p>
+        <p><strong>Purchase &amp; Support Data Deletion:</strong> Because HelloProgress does not create developer-hosted
+            user accounts, there is no remote account profile to delete. Purchase transaction records and tax/accounting
+            receipts are retained by Google Play and RevenueCat only for as long as needed to maintain active
+            entitlements, restore purchases, and satisfy statutory tax or financial recordkeeping laws. For assistance or
+            deletion inquiries regarding any support correspondence or pseudonymous RevenueCat purchase identifiers,
+            email <a href="mailto:sumitkahar073@gmail.com">sumitkahar073@gmail.com</a>. Verified requests are processed
+            promptly and within 30 days (subject to mandatory legal retention obligations).</p>
+
+        <h2>6. Data Security</h2>
+        <p>Local databases and preferences are protected by Android application sandboxing, and billing/entitlement
+            communications with Google Play and RevenueCat are encrypted in transit using HTTPS/TLS. Because local event
+            data resides on your device, we recommend protecting your device with a screen lock (PIN, password, or
+            biometrics).</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>HelloProgress is not directed at children under 13 years of age (or the applicable digital age of consent in
+            your jurisdiction, such as 13–16 in the EEA/UK). We do not knowingly collect personal data from children. If
+            you are a parent or guardian and believe a child has provided personal information to us, please contact
+            <a href="mailto:sumitkahar073@gmail.com">sumitkahar073@gmail.com</a> so we can promptly delete it.</p>
+
+        <h2>8. Third-Party Policies</h2>
+        <p>Integrated billing and platform services operate under their own privacy policies:</p>
         <ul>
-            <li><strong>Google Analytics (Future Integration):</strong> May collect anonymous usage data to help us understand how the App is used, which features are popular, and how we can improve the user experience.</li>
-            <li><strong>Firebase Crashlytics (Future Integration):</strong> May collect crash reports, device state information, and performance data to help us identify and fix bugs, ensuring a stable App experience.</li>
-            <li><strong>RevenueCat (Future Integration):</strong> May be used to manage in-app purchases and premium subscriptions. This service will process subscription statuses and purchase histories, but will not have access to your personal event data.</li>
+            <li><strong>Google Play / Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy"
+                    target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+            <li><strong>RevenueCat Privacy Policy:</strong> <a href="https://www.revenuecat.com/privacy/"
+                    target="_blank" rel="noopener">https://www.revenuecat.com/privacy/</a></li>
         </ul>
 
-        <h2>3. Data Security</h2>
-        <p>Since your event data is stored locally on your device, its security largely depends on the security of your device. We recommend keeping your device locked with a PIN, password, or biometric authentication to prevent unauthorized access.</p>
+        <h2>9. Your Privacy Rights</h2>
+        <p>Depending on your location (including the EEA, United Kingdom, and California under CCPA/CPRA), you may have
+            the right to access, rectify, export, restrict, or request deletion of your personal data, withdraw consent
+            for optional runtime Android permissions in device settings, and lodge a complaint with your local data
+            protection supervisory authority (for example, your EEA Member State authority or the UK Information
+            Commissioner's Office). We do <strong>not</strong> sell or share your personal information for cross-context
+            behavioral advertising.</p>
 
-        <h2>4. Data Retention</h2>
-        <p>Your local event data remains on your device until you manually delete it within the App or uninstall the App entirely. If you uninstall the App without using Android's backup feature, your data will be permanently lost.</p>
+        <div class="badge-trader">EU Digital Services Act (DSA) &amp; GDPR Compliance</div>
+        <h2>10. Legal Compliance, Data Controller &amp; Legal Bases</h2>
+        <p>This Privacy Policy aligns with the <strong>GDPR / UK GDPR</strong> (Regulation (EU) 2016/679), the
+            <strong>EU Digital Services Act (DSA)</strong> (Regulation (EU) 2022/2065), <strong>CCPA / CPRA</strong>,
+            and Google Play Developer Program Policies.</p>
 
-        <h2>5. Children's Privacy</h2>
-        <p>Our App is not intended for use by children under the age of 13. We do not knowingly collect personally identifiable information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us, and we will take necessary actions.</p>
+        <h3>10.1 Data Controller</h3>
+        <p>The Data Controller responsible for personal data processed in connection with HelloProgress is
+            <strong>Sumit Kahar</strong>, operating as an individual commercial developer / <strong>Trader</strong>.</p>
 
-        <h2>6. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time to reflect new features, such as the addition of analytics or subscription services. We will notify you of any changes by updating the "Last updated" date at the top of this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+        <h3>10.2 Legal Bases for Processing (GDPR Article 6)</h3>
+        <ul>
+            <li><strong>Performance of a Contract (Art. 6(1)(b)):</strong> Processing purchase tokens and entitlement
+                status via Google Play Billing and RevenueCat to deliver and restore paid PRO features.</li>
+            <li><strong>Legitimate Interests (Art. 6(1)(f)):</strong> Preventing entitlement fraud, verifying store
+                transactions, and maintaining purchase reliability using pseudonymous SDK identifiers.</li>
+            <li><strong>Compliance with Legal Obligations (Art. 6(1)(c)):</strong> Meeting consumer protection, EU DSA
+                trader transparency, and tax/accounting recordkeeping obligations.</li>
+            <li><strong>Consent (Art. 6(1)(a)):</strong> Optional runtime device permissions (such as notifications and
+                exact alarms) granted by you in Android settings.</li>
+        </ul>
 
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions, concerns, or suggestions regarding this Privacy Policy, please contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:sumitkahar073@gmail.com">sumitkahar073@gmail.com</a></p>
+        <h3>10.3 International Transfers &amp; Retention</h3>
+        <p>Integrated billing providers (Google Play and RevenueCat) may process purchase and pseudonymous entitlement
+            data outside your country of residence (including the United States) using approved legal safeguards such as
+            Standard Contractual Clauses (SCCs) or recognized adequacy frameworks. Entitlement records are retained for
+            the duration of your subscription or lifetime entitlement and as required by applicable tax or commercial
+            law.</p>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy periodically to reflect new features, legal requirements, or service
+            providers by posting the revised version at this URL with an updated "Last Updated" date.</p>
+
+        <h2>12. Contact Us &amp; Legal Notice (Data Controller)</h2>
+        <p>To ask questions, request deletion of support or purchase-identifier records, or exercise statutory privacy
+            rights, contact the Data Controller / Trader:</p>
+
+        <div class="contact-box">
+            <p><strong>App Name:</strong> HelloProgress (Hello Progress)</p>
+            <p><strong>Data Controller / Trader:</strong> Sumit Kahar (Individual Commercial Developer / Trader)</p>
+            <p><strong>Trader Status:</strong> Declared Trader under EU Digital Services Act (Regulation (EU) 2022/2065)</p>
+            <p><strong>Legal Address:</strong> 438, Kaana Paar, Ramnagar, Dhani Bazar, Pharenda, Maharajganj - 273161,
+                India</p>
+            <p><strong>Telephone:</strong> <a href="tel:+919151382162">+91 9151382162</a></p>
+            <p><strong>Support Email:</strong> <a href="mailto:sumitkahar073@gmail.com">sumitkahar073@gmail.com</a></p>
+            <p><strong>Package Name:</strong> com.github.helloprogress</p>
+            <p><strong>Terms of Service:</strong> <a
+                    href="https://sumitkahar992.github.io/hello_progress_termsofservice/">View Terms of Service</a></p>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 HelloProgress — Sumit Kahar. All rights reserved.</p>
+        </footer>
     </div>
 </body>
+
 </html>
